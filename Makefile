@@ -5,7 +5,7 @@ EXEC = MonitoramentoAtleta
 CC = g++
 
 # Flags de compilação
-CFLAGS = -Wall
+CFLAGS = -Wall -std=c++11
 
 # Arquivos de código-fonte
 SRCS = main.cpp atleta.cpp treinador.cpp
@@ -21,7 +21,7 @@ $(EXEC): $(OBJS)
 	$(CC) $(CFLAGS) -o $(EXEC) $(OBJS)
 
 # Regra genérica para compilar arquivos .cpp
-%.o: %.cpp $(HEADERS)
+.cpp.o:
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Limpeza dos arquivos objeto e do executável
