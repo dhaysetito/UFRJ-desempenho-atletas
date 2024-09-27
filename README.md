@@ -13,7 +13,7 @@ O projeto foi desenvolvido em C++ e inclui um sistema de menu interativo para a 
 
 O programa apresenta as seguintes opções de menu:
 
-1. **Evolução da Média dos Tempos**: Exibe a evolução da média móvel dos tempos de pelo menos três atletas nos últimos N treinamentos (N ≤ 7).
+1. **Evolução da Média dos Tempos**: Exibe a evolução da média móvel dos tempos de pelo menos três atletas nos últimos N treinamentos (3 ≤ N ≤ 7).
 2. **Agrupamento de Atletas por Desempenho**: Agrupa os atletas que apresentaram melhora, piora ou desempenho estável nos últimos treinamentos, considerando uma variação de 10%.
 3. **Ordenação pela Média de Todos os Tempos**: Ordena os atletas com base na média de todos os seus tempos de treinamento.
 4. **Ordenação pelos Melhores Resultados da Temporada**: Ordena os atletas com base nos seus melhores tempos em qualquer um dos treinamentos.
