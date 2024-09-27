@@ -4,21 +4,23 @@
 #include "atleta.h"
 #include "treinador.h"
 
+using namespace std;
+
 void mostrarMenu() {
-    std::cout << "Menu:\n";
-    std::cout << "1. Exibir evolução da média dos tempos dos atletas\n";
-    std::cout << "2. Exibir atletas com melhoria ou piora de desempenho\n";
-    std::cout << "3. Ordenar atletas por média de todos os tempos\n";
-    std::cout << "4. Ordenar atletas por melhores resultados da temporada\n";
-    std::cout << "5. Prever o tempo do próximo treino\n";
-    std::cout << "6. Sair\n\n";
+    cout << "Menu:\n";
+    cout << "1. Exibir evolução da média dos tempos dos atletas\n";
+    cout << "2. Exibir atletas com melhoria ou piora de desempenho\n";
+    cout << "3. Ordenar atletas por média de todos os tempos\n";
+    cout << "4. Ordenar atletas por melhores resultados da temporada\n";
+    cout << "5. Prever o tempo do próximo treino\n";
+    cout << "6. Sair\n\n";
 }
 
 // Aguarda 'Enter' antes de continuar
 void esperarEnter() {
-    std::cout << "\nPressione Enter para continuar...\n";
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');  // Limpa o buffer
-    std::cin.get();  // Espera o usuário pressionar Enter
+    cout << "\nPressione Enter para continuar...\n";
+    while (cin.get() != '\n'); // Limpa o buffer
+    cin.get();  // Espera o usuário pressionar Enter
 }
 
 int main() {
@@ -39,16 +41,7 @@ int main() {
 
     do {
         mostrarMenu();
-        std::cin >> opcao;
-
-        // Verifica se a entrada é válida
-        if (std::cin.fail()) {
-            std::cin.clear(); 
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); 
-            std::cout << "Entrada inválida! Por favor, insira um número.\n";
-            opcao = 0; 
-            continue; 
-        }
+        cin >> opcao;
 
         switch (opcao) {
             case 1:
@@ -67,10 +60,10 @@ int main() {
                 treinador.preverProximoTempo();
                 break;
             case 6:
-                std::cout << "Saindo...\n";
+                cout << "Saindo...\n";
                 break;
             default:
-                std::cout << "Opção inválida!\n";
+                cout << "Opção inválida!\n";
         }
 
         if (opcao != 6) {
