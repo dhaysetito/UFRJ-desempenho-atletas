@@ -4,30 +4,40 @@
 
 #include "atleta.h"
 
-Atleta::Atleta(std::string nome, std::vector<double> tempos) : nome(nome), tempos(tempos) {}
+using namespace std;
 
-std::string Atleta::getNome() {
+Atleta::Atleta(string nome, vector<double> tempos) : nome(nome), tempos(tempos) {}
+
+string Atleta::getNome() {
     return nome;
 }
 
-std::vector<double> Atleta::getTempos() {
+vector<double> Atleta::getTempos() {
     return tempos;
 }
 
+/* Calcula a média móvel de N tempos do atleta dos últimos N tempos.
+ */
 double Atleta::calcularMediaMovel(int N) {
     if (tempos.size() < static_cast<size_t>(N)) return -1;
-    return std::accumulate(tempos.end() - N, tempos.end(), 0.0) / N;
+    return accumulate(tempos.end() - N, tempos.end(), 0.0) / N;
 }
 
+/* Calcula a média móvel de N tempos do atleta dos últimos N - 1 tempos.
+ */
 double Atleta::calcularMediaMovelAnterior(int N) {
     if (tempos.size() < static_cast<size_t>(N + 1)) return -1;
-    return std::accumulate(tempos.end() - N - 1, tempos.end() - 1, 0.0) / N;
+    return accumulate(tempos.end() - N - 1, tempos.end() - 1, 0.0) / N;
 }
 
+/* Calcula o menor tempo do atleta em toda temporada.
+ */
 double Atleta::calcularMelhorTempo() {
-    return *std::min_element(tempos.begin(), tempos.end());
+    return *min_element(tempos.begin(), tempos.end());
 }
 
+/* Utiliza regressão linear simples para prever o tempo do próximo treino de um atleta com base nos tempos anteriores
+ */
 double Atleta::preverProximoTempo() {
     int n = tempos.size();
     double xSum = 0, ySum = 0, xySum = 0, xxSum = 0;

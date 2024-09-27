@@ -4,9 +4,11 @@
 #include <vector>
 #include "atleta.h"
 
+using namespace std;
+
 class Treinador {
 private:
-    std::vector<Atleta> atletas;
+    vector<Atleta> atletas;
 
 public:
     Treinador();

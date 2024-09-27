@@ -4,16 +4,18 @@
 #include <vector>
 #include <string>
 
+using namespace std;
+
 class Atleta {
     private:
-        std::string nome;
-        std::vector<double> tempos;
+        string nome;
+        vector<double> tempos;
 
     public:
-        Atleta(std::string nome, std::vector<double> tempos);
+        Atleta(string nome, vector<double> tempos);
         
-        std::string getNome();
-        std::vector<double> getTempos();
+        string getNome();
+        vector<double> getTempos();
         
         double calcularMediaMovel(int N);
         double calcularMediaMovelAnterior(int N);
