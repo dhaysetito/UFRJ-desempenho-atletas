@@ -7,7 +7,7 @@
 
 Este programa simula o acompanhamento do desempenho de atletas velocistas ao longo de uma série de treinamentos cronometrados. Ele oferece funcionalidades para exibir a evolução dos tempos, prever o próximo desempenho com base em uma regressão linear simples, além de ordenar e agrupar os atletas por critérios de desempenho. 
 
-O projeto foi desenvolvido em C++ e inclui um sistema de menu interativo para a navegação entre as diferentes funcionalidades.
+O projeto foi desenvolvido em C++ e inclui um menu mostrado no terminal para a navegação entre as diferentes funcionalidades.
 
 ## Funcionalidades
 
