@@ -46,7 +46,7 @@ Para compilar e executar o programa, siga os seguintes passos:
    Após a compilação, o programa pode ser executado com o comando:
    
    ```bash
-   ./velocistas
+   make run
    ```
 
 3. **Limpeza**:
@@ -64,7 +64,7 @@ Para compilar e executar o programa, siga os seguintes passos:
 
 ## Observações
 
-- **Média Móvel**: A média móvel é calculada com base nos últimos N treinamentos (N ≤ 7).
+- **Média Móvel**: A média móvel é calculada com base nos últimos N treinamentos (3 ≤ N ≤ 7).
 - **Previsão com Regressão Linear**: A previsão do próximo tempo de treino é feita utilizando os dados anteriores por meio de um procedimento de regressão linear simples.
 - Os tempos de treino são **inicializados diretamente no código**, não havendo necessidade de entrada manual de dados ou leitura de arquivos.
 
