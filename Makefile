@@ -1,11 +1,11 @@
 #Nome do executável
-EXEC = programa
+EXEC = MonitoramentoAtleta
 
 # Compilador
 CC = g++
 
 # Flags de compilação
-CFLAGS = -Wall -g
+CFLAGS = -Wall
 
 # Arquivos de código-fonte
 SRCS = main.cpp atleta.cpp treinador.cpp
